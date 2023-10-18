@@ -158,7 +158,7 @@ rm register for medium operations.
   rd = rs1 ^ rs2;
   pc = pc + 4;
 ```
-> **ori**  rd, rs1, IMMEDIATE
+> **xori**  rd, rs1, IMMEDIATE
 ```c
   rd = extend_signed_12bit(IMMEDIATE);
   rd = rs1 ^ rd;
