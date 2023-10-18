@@ -194,67 +194,73 @@ rm register for medium operations.
 > **beq**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 == rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 > **bne**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 != rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 > **blt**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 < rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 > **bltu**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = (uint64_t)rs1 < (uint64_t)rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 > **bge**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 >= rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 > **bgeu**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = (uint64_t)rs1 >= (uint64_t)rs2;
-  rm2 = IMMEDIATE_BRANCH;
+  rm1 = -rm1;
+  rm2 = IMMEDIATE_BRANCH_OFFSET;
   rm2 = rm2 << 1;
   rm2 = extend_signed_13bit(rm2);
   rm2 = rm2 - 4;
-  rm2 = rm2 * rm1;
-  pc = pc + 4;
+  rm2 = rm2 & rm1;
+  rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
 
@@ -262,7 +268,7 @@ rm register for medium operations.
 > **jal**  rd, IMMEDIATE_JUMP
 ```c
   rd = pc + 4;
-  rm1 = IMMEDIATE_JUMP;
+  rm1 = IMMEDIATE_JUMP_OFFSET;
   rm1 = rm1 << 1;
   rm1 = extend_signed_21bit(rm1);
   pc = pc + rm1;
