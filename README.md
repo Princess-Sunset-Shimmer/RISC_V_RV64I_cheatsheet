@@ -36,6 +36,7 @@ rm register for medium operations.
   rd = pc + rd;
   pc = pc + 4;
 ```
+- - - -
 > **sub**  rd, rs1, rs2
 ```c
   rd = rs1 - rs2;
@@ -75,6 +76,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
+- - - -
 > **sll**  rd, rs1, rs2
 ```c
   rd = rs2 & 63;
@@ -142,6 +144,7 @@ rm register for medium operations.
   rd = rs1 & rd;
   pc = pc + 4;
 ```
+- - - -
 > **or**  rd, rs1, rs2
 ```c
   rd = rs1 | rs2;
@@ -153,6 +156,7 @@ rm register for medium operations.
   rd = rs1 | rd;
   pc = pc + 4;
 ```
+- - - -
 > **xor**  rd, rs1, rs2
 ```c
   rd = rs1 ^ rs2;
@@ -325,6 +329,7 @@ rm register for medium operations.
   rs1 = rs1 + rd;
   rd = *(int64_t*)rs1;
 ```
+- - - -
 > **lui**  rd, IMMEDIATE_UPPER
 ```c
   rd = IMMEDIATE_UPPER;
