@@ -28,6 +28,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
+- - - -
 > **auipc**  rd, IMMEDIATE_UPPER
 ```c
   rd = IMMEDIATE_UPPER;
