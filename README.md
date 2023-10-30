@@ -1,9 +1,8 @@
 # RISC-V RV64I cheatsheet
 I write C style pseudo codes to explain what does every single RV64I instruction do(not include privileged instructions).
 rm register for medium operations.
-
 # ALU:
-  #### 1. arithmatic
+  ## 1. arithmatic
 > **add**  rd, rs1, rs2
 ```c
   rd = rs1 + rs2;
@@ -49,8 +48,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-
-  #### 2. logical shift
+  ## 2. logical shift
 > **srl**  rd, rs1, rs2
 ```c
   rd = rs2 & 63;
@@ -104,8 +102,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-
-  #### 3. arithmatic shift
+  ## 3. arithmatic shift
 > **sra**  rd, rs1, rs2
 ```c
   rd = rs2 & 63;
@@ -132,8 +129,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-
-  #### 4. boolean bitwise
+  ## 4. boolean bitwise
 > **and**  rd, rs1, rs2
 ```c
   rd = rs1 & rs2;
@@ -169,8 +165,7 @@ rm register for medium operations.
   rd = rs1 ^ rd;
   pc = pc + 4;
 ```
-
-  #### 5. comparison
+  ## 5. comparison
 > **slt**  rd, rs1, rs2
 ```c
   rd = rs1 < rs2;
