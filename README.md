@@ -2,7 +2,7 @@
 I write C style pseudo codes to explain what does every single RV64I instruction do(not include privileged instructions).
 rm register for medium operations.
 
-## ALU:
+# ALU:
   #### 1. arithmatic
 > **add**  rd, rs1, rs2
 ```c
@@ -194,7 +194,7 @@ rm register for medium operations.
   pc = pc + 4;
 ```
 
-## transfer control:
+# transfer control:
   #### 1. conditional
 > **beq**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
@@ -286,7 +286,7 @@ rm register for medium operations.
   pc = pc & -2;
 ```
 
-## data transmission:
+# data transmission:
   #### 1. load
 > **lb**  rd, IMMEDIATE(rs1)
 ```c
