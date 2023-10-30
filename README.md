@@ -188,9 +188,8 @@ rm register for medium operations.
   rd = (uint64_t)rs1 < (uint64_t)rd;
   pc = pc + 4;
 ```
-
 # transfer control:
-  #### 1. conditional
+  ## 1. conditional
 > **beq**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 == rs2;
@@ -263,8 +262,7 @@ rm register for medium operations.
   rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
-
-  #### 2. unconditional
+  ## 2. unconditional
 > **jal**  rd, IMMEDIATE_JUMP
 ```c
   rd = pc + 4;
@@ -280,9 +278,8 @@ rm register for medium operations.
   pc = rs1 + rm1;
   pc = pc & -2;
 ```
-
 # data transmission:
-  #### 1. load
+  ## 1. load
 > **lb**  rd, IMMEDIATE(rs1)
 ```c
   rd = extend_signed_12bit(IMMEDIATE);
@@ -333,8 +330,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-
-  #### 2. store
+  ## 2. store
 > **sb**  rs2, IMMEDIATE_STORE(rs1)
 ```c
   rm1 = extend_signed_12bit(IMMEDIATE_STORE);
