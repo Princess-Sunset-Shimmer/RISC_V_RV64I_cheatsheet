@@ -1,6 +1,9 @@
 # RISC-V RV64I cheatsheet
 I write C style pseudo codes to explain what does every single RV64I instruction do(not include privileged instructions).
 rm register for medium operations.
+<details>
+        <summary>[ALU](#ALU "goto ALU")</summary>
+</details>
 # ALU:
   ## 1. arithmatic
 > **add**  rd, rs1, rs2
