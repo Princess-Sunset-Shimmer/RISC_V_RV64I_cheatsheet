@@ -2,8 +2,8 @@
 I write C style pseudo codes to explain what does every single RV64I instruction do(not include privileged instructions).
 rm register for medium operations.
 
-[ALU](#ALU "goto ALU")
-
+- [ALU](#ALU "goto ALU")
+- [transfer control](#transfer-control "goto tranfer-control")
 # ALU:
   ## 1. arithmatic
 > **add**  rd, rs1, rs2
