@@ -192,7 +192,7 @@ rm register for medium operations.
   pc = pc + 4;
 ```
 # transfer control:
-  ## .conditional branch
+  ## .conditional branch:
 > **beq**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 == rs2;
@@ -265,7 +265,7 @@ rm register for medium operations.
   rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
-  ## .unconditional jump
+  ## .unconditional jump:
 > **jal**  rd, IMMEDIATE_JUMP
 ```c
   rd = pc + 4;
