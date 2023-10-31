@@ -4,6 +4,9 @@ rm register for medium operations.
 - [ALU](#ALU "goto ALU")
   - [arithmatic](#arithmatic "goto arithmatic")
   - [logical shift](#logical-shift "goto logical-shift")
+  - [arithmatic shift](#arithmatic-shift "goto arithmatic-shift")
+  - [bitwise](#bitwise "goto bitwise")
+  - [conditional set](#conditional-set "goto conditional-set")
 - [transfer control](#transfer-control "goto tranfer-control")
 - [data transmission](#data-transmission "goto data-transmission")
 # ALU:
