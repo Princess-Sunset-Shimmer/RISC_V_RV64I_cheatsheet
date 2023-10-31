@@ -5,7 +5,7 @@ rm register for medium operations.
 - [transfer control](#transfer-control "goto tranfer-control")
 - [data transmission](#data-transmission "goto data-transmission")
 # ALU:
-  ## 1. arithmatic
+  ## .arithmatic:
 > **add**  rd, rs1, rs2
 ```c
   rd = rs1 + rs2;
