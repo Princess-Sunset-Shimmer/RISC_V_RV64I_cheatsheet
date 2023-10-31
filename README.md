@@ -51,7 +51,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-  ## 2. logical shift
+  ## .logical shift:
 > **srl**  rd, rs1, rs2
 ```c
   rd = rs2 & 63;
@@ -105,7 +105,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-  ## 3. arithmatic shift
+  ## .arithmatic shift:
 > **sra**  rd, rs1, rs2
 ```c
   rd = rs2 & 63;
@@ -132,7 +132,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-  ## 4. boolean bitwise
+  ## .bitwise:
 > **and**  rd, rs1, rs2
 ```c
   rd = rs1 & rs2;
@@ -168,7 +168,7 @@ rm register for medium operations.
   rd = rs1 ^ rd;
   pc = pc + 4;
 ```
-  ## 5. comparison
+  ## .conditional set:
 > **slt**  rd, rs1, rs2
 ```c
   rd = rs1 < rs2;
@@ -192,7 +192,7 @@ rm register for medium operations.
   pc = pc + 4;
 ```
 # transfer control:
-  ## 1. conditional
+  ## .conditional branch
 > **beq**  rs1, rs2, IMMEDIATE_BRANCH
 ```c
   rm1 = rs1 == rs2;
@@ -265,7 +265,7 @@ rm register for medium operations.
   rm2 = rm2 + 4;
   pc = pc + rm2;
 ```
-  ## 2. unconditional
+  ## .unconditional jump
 > **jal**  rd, IMMEDIATE_JUMP
 ```c
   rd = pc + 4;
@@ -282,7 +282,7 @@ rm register for medium operations.
   pc = pc & -2;
 ```
 # data transmission:
-  ## 1. load
+  ## .load:
 > **lb**  rd, IMMEDIATE(rs1)
 ```c
   rd = extend_signed_12bit(IMMEDIATE);
@@ -333,7 +333,7 @@ rm register for medium operations.
   rd = extend_signed_32bit(rd);
   pc = pc + 4;
 ```
-  ## 2. store
+  ## .store:
 > **sb**  rs2, IMMEDIATE_STORE(rs1)
 ```c
   rm1 = extend_signed_12bit(IMMEDIATE_STORE);
