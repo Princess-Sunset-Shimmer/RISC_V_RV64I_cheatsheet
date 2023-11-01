@@ -8,6 +8,8 @@ rm register for medium operations.
   - [bitwise](#bitwise "goto bitwise")
   - [conditional set](#conditional-set "goto conditional-set")
 - [transfer control](#transfer-control "goto tranfer-control")
+  - [conditional branch](#conditional-branch "goto conditional-branch")
+  - [unconditional jump](#unconditonal-jump "goto unconditional-jump")
 - [data transmission](#data-transmission "goto data-transmission")
 # ALU:
   ## .arithmatic:
