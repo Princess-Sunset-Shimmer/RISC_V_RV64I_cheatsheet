@@ -9,7 +9,7 @@ rm register for medium operations.
   - [conditional set](#conditional-set "goto conditional-set")
 - [transfer control](#transfer-control "goto tranfer-control")
   - [conditional branch](#conditional-branch "goto conditional-branch")
-  - [unconditional jump](#unconditonal-jump "goto unconditional-jump")
+  - [unconditional jump](#unconditional-jump "goto unconditional-jump")
 - [data transmission](#data-transmission "goto data-transmission")
   - [load](#load "goto load")
   - [store](#store "goto store")
