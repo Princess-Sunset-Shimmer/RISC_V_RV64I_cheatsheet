@@ -11,6 +11,8 @@ rm register for medium operations.
   - [conditional branch](#conditional-branch "goto conditional-branch")
   - [unconditional jump](#unconditonal-jump "goto unconditional-jump")
 - [data transmission](#data-transmission "goto data-transmission")
+  - [load](#load "goto load")
+  - [store](#store "goto store")
 # ALU:
   ## .arithmatic:
 > **add**  rd, rs1, rs2
